@@ -26,7 +26,7 @@ cat ~/.ssh/id_rsa.pub
 # Cloning over SSH allows you to push/pull changes.
 # Use the credential helper with caching set to 1 hour to avoid
 # having to repeatedly enter your username and password.
-git clone https://github.com/munair/www-cdoseoul-kr.git
+git clone https://github.com/munair/www-cdoseoul-com.git
 git config --global user.name "Munair Simpson"
 git config --global user.email "munair@gmail.com"
 git config --global credential.helper 'cache --timeout=3600'
