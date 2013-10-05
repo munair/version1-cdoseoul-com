@@ -45,9 +45,7 @@ git branch
 sleep 5
 git merge development
 git push origin staging
-cat ~/.netrc | grep heroku || bash remove-heroku-keys.bash
-cat ~/.netrc | grep heroku || heroku login
-cat ~/.netrc | grep heroku || heroku keys:add ~/.ssh/id_rsa.pub
+cat ~/.netrc | grep heroku || heroku login && heroku keys:add ~/.ssh/id_rsa.pub
 heroku git:remote -a staging-cdoseoul-com -r staging-heroku
 git push staging-heroku staging:master
 curl http://staging-cdoseoul-com.herokuapp.com | more
