@@ -48,8 +48,8 @@ git push origin staging
 cat ~/.netrc | grep heroku || heroku login
 cat ~/.netrc | grep heroku || heroku keys:add
 heroku git:remote -a www-cdoseoul-com-staging -r staging-heroku
-curl http://www-cdoseoul-com-staging.herokuapp.com | more
 git push staging-heroku staging:master
+curl http://www-cdoseoul-com-staging.herokuapp.com | more
 [ $3 == "noprompting" ] || while true; do
     read -p "shall we push changes to the master GitHub repository and the production instance on Heroku? " yn
     case $yn in
