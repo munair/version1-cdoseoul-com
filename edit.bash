@@ -47,9 +47,9 @@ git merge development
 git push origin staging
 cat ~/.netrc | grep heroku || heroku login
 cat ~/.netrc | grep heroku || heroku keys:add
-heroku git:remote -a www-cdoseoul-com-staging -r staging-heroku
+heroku git:remote -a staging-cdoseoul-com -r staging-heroku
 git push staging-heroku staging:master
-curl http://www-cdoseoul-com-staging.herokuapp.com | more
+curl http://staging-cdoseoul-com.herokuapp.com | more
 [ $3 == "noprompting" ] || while true; do
     read -p "shall we push changes to the master GitHub repository and the production instance on Heroku? " yn
     case $yn in
