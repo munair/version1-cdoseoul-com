@@ -40,7 +40,7 @@ git push origin development
         * ) echo "please answer yes or no.";;
     esac
 done
-git checkout staging
+git checkout staging || git checkout -b staging
 git branch
 sleep 5
 git merge development
@@ -48,7 +48,6 @@ git push origin staging
 cat ~/.netrc | grep heroku || heroku login && heroku keys:add ~/.ssh/id_rsa.pub
 heroku git:remote -a staging-cdoseoul-com -r staging-heroku
 git push staging-heroku staging:master
-curl http://staging-cdoseoul-com.herokuapp.com | more
 [ $3 == "noprompting" ] || while true; do
     read -p "shall we push changes to the master GitHub repository and the production instance on Heroku? " yn
     case $yn in
@@ -57,12 +56,11 @@ curl http://staging-cdoseoul-com.herokuapp.com | more
         * ) echo "please answer yes or no.";;
     esac
 done
-git checkout master
+git checkout master || git checkout -b master
 git branch
 sleep 5
 git merge staging
 git push origin master
 heroku git:remote -a www-cdoseoul-com -r production-heroku
 git push production-heroku master:master
-curl http://www-cdoseoul-com.herokuapp.com | more
 git checkout development
