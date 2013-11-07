@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    <div class="container">
+      <div class="row-fluid">
+	<div class="span12">
+      	    <div class="row-fluid heading">
+	      <div class="span12">
+	  	<h1>be mindful.</h1>
+	  	<h1>get fit.</h1>
+	      </div>
+      	    </div>
+      	    <div class="row-fluid subheading">
+	      <div class="span12">
+	  	<p class="lead">cordão de ouro seoul</p>
+	      </div>
+      	    </div>
+      	    <div class="row-fluid description">
+	      <div id="about" class="span12 copy">
+	        <p>
+Relieve stress and maintain your physical health with <a href="http://www.zumbicdo.com" target="zumba">Instrutor Zumbi</a>'s Capoeira-energized morning meditation. The session lasts exactly one hour long and consists of 30 minutes of vigorous Capoeira, and 30 minutes of peaceful contemplation in a posture of your choosing. During the Capoeira session we will practice simple capoeira movement repeatedly while maintaining a focus on our breathing. During the contemplation session with will practice traditional <a href="en.wikipedia.org/wiki/Samatha" target="samatha">Samatha Meditation</a> in silence. Leave quietly at the end of the hour or feel free to stay in mindful observation of the breath.
+	        </p>
+	        <p>
+Silence will be observed!
+	        </p>
+	      </div><hr />
+	    </div>
+      	    <div class="row-fluid marketing">
+	      <div class="span6">
+		<h5>Capoeira + Meditation</h5><hr />
+	        <table align="center">
+		  <tr><td>Practice: </td><td class="last"> Weekdays</td></tr>
+		  <tr><td>Period: </td><td class="last"> 7AM - 8AM</td></tr>
+		  <tr><td>Place: </td><td class="last"> Tap Dance | 5F 102-2 Goryo Building Jongno-2ga | Jongno-gu</td></tr>
+		  <tr><td>Price: </td><td class="last"> 150,000 KRW</td></tr>
+		  <tr><td> </td><td> </td></tr>
+	        </table>
+	        <table align="center">
+		  <tr><td><img src="https://s3-ap-northeast-1.amazonaws.com/cdoseoul/qu-recreation-logo-300x120px.png" width="45%"></td><td><img src="https://s3-ap-northeast-1.amazonaws.com/cdoseoul/cdoseoul-logo-alpha-300x300px.png" width="45%"></td></tr>
+	        </table>
+	      </div>
+	      <div class="span6">
+		<h5>Information Request Form</h5><hr />
+                <div id="stylized-form">
+                        <form id="form" name="form" method="post" action="/contact">
+                                <div class="wrapper-block">
+                                        <label>Name:<span class="small-label">please enter your name</span></label>
+                                        <input type="text" name="name" id="name" />
+                                </div>
+                                <div class="wrapper-block">
+                                        <label>Email:<span class="small-label">please enter your email</span></label>
+                                        <input type="text" name="email" id="email" />
+                                </div>
+                                <div class="wrapper-block">
+                                        <label>Mobile:<span class="small-label">please enter your mobile number</span></label>
+                                        <input type="text" name="mobile" id="mobile" />
+                                </div>
+                                <input type="submit" value="Submit" class="submit btn-form" /></input>
+                        </form>
+                </div>
+	      </div>
+      	    </div>
+	  </div>
+	</div>
+      </div>
+    </div>
+{% endblock %}
