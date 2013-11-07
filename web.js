@@ -1,15 +1,18 @@
 var express = require('express');
 var fs = require('fs');
 var postmark = require("postmark")(process.env.POSTMARK_API_KEY);
+var swig = require('swig');
 
-
-var app = express.createServer(express.logger());
+var app = express(express.logger());
 
 app.use(express.bodyParser());
+app.engine('html', swig.renderFile);
+app.set('view engine', 'html');
+app.set('views', __dirname + '/');
+
 
 app.get('/', function(request, response) {
-  var htmlBuffer = fs.readFileSync('index.html', 'utf-8');
-  response.send(htmlBuffer);
+  response.render('index', { });
 });
 
 app.post('/contact', function(request, response) {
