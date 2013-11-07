@@ -15,6 +15,10 @@ app.get('/', function(request, response) {
   response.render('index', { });
 });
 
+app.get('/meditation', function(request, response) {
+  response.render('meditation', { });
+});
+
 app.post('/contact', function(request, response) {
   var name = request.body.name;
   var email = request.body.email;
