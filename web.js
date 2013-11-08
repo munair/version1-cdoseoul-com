@@ -26,7 +26,7 @@ app.post('/contact', function(request, response) {
   var name = request.body.name;
   var email = request.body.email;
   var mobile = request.body.mobile;
-  var out = "contact name: " + name + "\tcontact email: " + email + "\tmobile: " + mobile + "\tcontact form used: " + app.get('contact form') + "\n";
+  var out = "contact name: " + name + "\ncontact email: " + email + "\nmobile: " + mobile + "\ncontact form used: " + app.get('contact form') + "\n";
   postmark.send({
     "From": "zumbi@cdoseoul.com",
     "To": "zumbi@cdoseoul.com",
