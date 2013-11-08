@@ -4,7 +4,7 @@ var postmark = require("postmark")(process.env.POSTMARK_API_KEY);
 var swig = require('swig');
 
 var app = express(express.logger());
-var form = 'initializing';
+var contactForm = 'initializing';
 
 app.use(express.bodyParser());
 app.engine('html', swig.renderFile);
@@ -12,21 +12,21 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/');
 
 
-app.get('/', function(request, response, form) {
-  form = 'index';
+app.get('/', function(request, response, contactForm) {
+  contactForm = 'index';
   response.render('index', { });
 });
 
-app.get('/meditation', function(request, response, form) {
-  form = 'meditation';
+app.get('/meditation', function(request, response, contactForm) {
+  contactForm = 'meditation';
   response.render('meditation', { });
 });
 
-app.post('/contact', function(request, response, form) {
+app.post('/contact', function(request, response, contactForm) {
   var name = request.body.name;
   var email = request.body.email;
   var mobile = request.body.mobile;
-  var out = "contact name: " + name + "\tcontact email: " + email + "\tmobile: " + mobile + "\tform used: " + form + "\n";
+  var out = "contact name: " + name + "\tcontact email: " + email + "\tmobile: " + mobile + "\tcontactForm used: " + contactForm + "\n";
   postmark.send({
     "From": "zumbi@cdoseoul.com",
     "To": "zumbi@cdoseoul.com",
