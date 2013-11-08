@@ -8,14 +8,17 @@ var app = express(express.logger());
 app.use(express.bodyParser());
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
+app.set('contact form', 'initializing value');
 app.set('views', __dirname + '/');
 
 
 app.get('/', function(request, response) {
+  app.set('contact form', 'index');
   response.render('index', { });
 });
 
 app.get('/meditation', function(request, response) {
+  app.set('contact form', 'meditation');
   response.render('meditation', { });
 });
 
@@ -23,7 +26,7 @@ app.post('/contact', function(request, response) {
   var name = request.body.name;
   var email = request.body.email;
   var mobile = request.body.mobile;
-  var out = "contact name: " + name + "\tcontact email: " + email + "\tmobile: " + mobile + "\n";
+  var out = "contact name: " + name + "\ncontact email: " + email + "\nmobile: " + mobile + "\ncontact form used: " + app.get('contact form') + "\n";
   postmark.send({
     "From": "zumbi@cdoseoul.com",
     "To": "zumbi@cdoseoul.com",
