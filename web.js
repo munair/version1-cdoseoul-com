@@ -11,19 +11,21 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/');
 
 
-app.get('/', function(request, response) {
+app.get('/', function(request, response, form) {
+  form = 'index';
   response.render('index', { });
 });
 
-app.get('/meditation', function(request, response) {
+app.get('/meditation', function(request, response, form) {
+  form = 'meditation';
   response.render('meditation', { });
 });
 
-app.post('/contact', function(request, response) {
+app.post('/contact', function(request, response, form) {
   var name = request.body.name;
   var email = request.body.email;
   var mobile = request.body.mobile;
-  var out = "contact name: " + name + "\tcontact email: " + email + "\tmobile: " + mobile + "\n";
+  var out = "contact name: " + name + "\tcontact email: " + email + "\tmobile: " + mobile + "\tform used: " + form + "\n";
   postmark.send({
     "From": "zumbi@cdoseoul.com",
     "To": "zumbi@cdoseoul.com",
