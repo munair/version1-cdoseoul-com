@@ -4,6 +4,7 @@ var postmark = require("postmark")(process.env.POSTMARK_API_KEY);
 var swig = require('swig');
 
 var app = express(express.logger());
+var form = 'initializing';
 
 app.use(express.bodyParser());
 app.engine('html', swig.renderFile);
