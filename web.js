@@ -26,7 +26,14 @@ app.post('/contact', function(request, response) {
   var name = request.body.name;
   var email = request.body.email;
   var mobile = request.body.mobile;
-  var out = 'contact name: ' + name + '\ncontact email: ' + email + '\nmobile: ' + mobile + '\n';
+  var referral = request.body.referral;
+  var validation = request.body.validation;
+  var out = 'contact name: ' + name 
+	  + '\ncontact email: ' + email 
+	  + '\nmobile: ' + mobile 
+	  + '\nreferral: ' + referral 
+	  + '\nvalidation: ' + validation 
+	  + '\n';
   postmark.send({
     'From': 'zumbi@cdoseoul.com',
     'To': 'zumbi@cdoseoul.com',
