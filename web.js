@@ -34,18 +34,21 @@ app.post('/contact', function(request, response) {
 	  + '\nreferral: ' + referral 
 	  + '\nvalidation: ' + validation 
 	  + '\n';
-  postmark.send({
-    'From': 'zumbi@cdoseoul.com',
-    'To': 'zumbi@cdoseoul.com',
-    'Subject': app.get('form subject'),
-    'TextBody': out,
-  }, function(error, success) {
+
+  if (validation === "capoeira") {
+    postmark.send({
+      'From': 'zumbi@cdoseoul.com',
+      'To': 'zumbi@cdoseoul.com',
+      'Subject': app.get('form subject'),
+      'TextBody': out,
+    }, function(error, success) {
        if(error) {
           console.error('Unable to send via postmark: ' + error.message);
          return;
        }
-    console.info('Sent to postmark for delivery')
-  });
+       console.info('Sent to postmark for delivery')
+    });
+  }
 
   response.redirect('back');
 });
