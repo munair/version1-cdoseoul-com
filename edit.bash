@@ -62,6 +62,6 @@ sleep 5
 git merge staging
 git push origin master
 heroku git:remote -a www-cdoseoul-com -r production-heroku
-heroku stack:set cedar-14
+heroku stack:set cedar-14 --app www-cdoseoul-com
 git push production-heroku master:master
 git checkout development
