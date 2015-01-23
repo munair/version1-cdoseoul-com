@@ -44,10 +44,10 @@ git checkout staging || git checkout -b staging
 git branch
 sleep 5
 git merge development
-heroku stack:set cedar-14
 git push origin staging
 cat ~/.netrc | grep heroku || heroku login && heroku keys:add ~/.ssh/id_rsa.pub
 heroku git:remote -a staging-cdoseoul-com -r staging-heroku
+heroku stack:set cedar-14
 git push staging-heroku staging:master
 [ $3 == "noprompting" ] || while true; do
     read -p "shall we push changes to the master GitHub repository and the production instance on Heroku? " yn
