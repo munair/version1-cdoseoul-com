@@ -17,6 +17,11 @@ app.get('/', function(request, response) {
   response.render('index', { });
 });
 
+app.get('/classpreparation', function(request, response) {
+  app.set('form subject', 'Preparation for Capoeira');
+  response.render('classpreparation', { });
+});
+
 app.get('/meditation', function(request, response) {
   app.set('form subject', 'Reservation for Capoeira + Meditation');
   response.render('meditation', { });
