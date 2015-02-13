@@ -11,6 +11,10 @@
 # branch at the origin after changes on the local engineering repository
 # have been vetted and merged back into the development repository.
 #
+# development----------development--->
+#       \		  /
+#        \__engineering__/
+#
 # 
 git checkout engineering || git checkout -b engineering
 git branch
