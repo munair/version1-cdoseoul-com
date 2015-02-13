@@ -33,7 +33,6 @@ git push engineering-heroku engineering:master
 git checkout development || git checkout -b development
 git branch
 sleep 5
-heroku git:remote -a engineering-cdoseoul-com -r engineering-heroku
 git merge engineering
 git push engineering-heroku engineering:master
 [ $3 == "noprompting" ] || while true; do
