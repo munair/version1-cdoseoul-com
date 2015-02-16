@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <!-- We use the Facebook JavaScript Plugin to allow for comments. -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=117771778298074&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    <div class="container">
+      <div class="row-fluid">
+	<div class="span12">
+      	  <div class="row-fluid heading">
+	    <div class="span12">
+	      <h1>Expats Integrate</h1>
+	      <h3>Five Reasons Why Capoeira Helps Expats Integrate</h3>
+	      <img src="http://www.munair.com/images/headshot.png"  width="50px" height="50px" alt="Instrutor Zumbi"> via <a href="http://www.zumbicdo.com/" target="_new" title="Posts by Zumbi CDO" rel="author">Instrutor Zumbi</a> on 11/1/2015
+	    </div>
+      	  </div>
+      	  <div class="row-fluid subheading">
+	    <div class="span12">
+	      <p class="lead">cordão de ouro seoul</p>
+	    </div>
+      	  </div>
+      	  <div class="row-fluid description">
+	    <div id="about" class="span12 copy">
+	      <p>
+Expats often arrive in Korea and feel isolated within weeks. They feel cut out of mainstream society and opportunities to grow and progress. It doesn’t matter whether the expats are English teachers or business consultants for Samsung. All expats are immediately thrown into a battle against a shrinking social circle and opportunities for genuine bonding.
+              </p>
+	      <p>
+Having survived six years in Korea, I am acutely aware that I would never have been able to do it without the help of <a href="http://www.facebook.com/cdoseoul" target="_new">my Capoeira group</a>. Here are five reasons why Capoeira helps expats integrate into Korea.
+	      </p>
+	    </div><hr />
+	  </div>
+      	  <div class="row-fluid marketing">
+	    <div class="span4">
+	      <h5>Identity</h5><hr />
+              <p style="font-size:12px">
+Capoeira is a community-oriented art. Each Capoeira group has a certain identity that its members embrace. Some Capoeira groups want to build a community of great fighters that regularly challenge each other and fight ferociously to sharpen reaction times or improve their ability to do combat with other martial artists. Other Capoeira groups focus on efficiency of movement. Yet others focus on preserving a cultural heritage that survived centuries of oppression. No matter the focus of an individual Capoeira group, the members rally around each other to ensure that the organisations goals are met. That's why Capoeiristas identify with a group and forget about superficial differences within the group.
+              </p>
+	    </div>
+	    <div class="span4">
+	      <h5>Inclusivity</h5><hr />
+              <p style="font-size:12px">
+Capoeira was practiced by people that were denied the rights of regular citizens. Consequently, Capoeiristas go out of their way to be inclusive as they how terrible it is to be excluded from society. Consequently, members are actively working on breaking down cultural and language barriers. For example, in our Capoeira group, expats are encouraged to learn Korean to help bond with the Korean members of the group and vice-versa. Taking the time to study another language and open your mind to another culture that is very foreign to yours is challenging. Yet, since all members of the group are burdened with over coming language and cultural issues, it immediately becomes something everyone forms strong bonds over.
+              </p>
+	    </div>
+	    <div class="span4">
+	      <h5>Diversity</h5><hr />
+              <p style="font-size:12px">
+Capoeira values diversity of thought and behaviour. Capoeira is a form of bodily expression where the individual becomes an artist, and the roda where he or she plays Capoeira becomes the canvas. Capoeiristas are addicted to expressions of beauty, skill, and especially creativity. They love nothing more than seeing something new unfold in the theatre of the roda. Consequently, Capoeira values the individual and what they bring to the community, irrespective of background.
+              </p>
+      	    </div>
+	  </div>
+      	  <div class="row-fluid faq">
+	    <div class="span4">
+	      <img src="https://s3-ap-northeast-1.amazonaws.com/www-cdoseoul-com/expatsintegrate.png" width="100%" alt="Diet Bliss">
+      	    </div>
+	    <div class="span4">
+	      <h5>Fellowship</h5><hr />
+              <p style="font-size:12px">
+Capoeiristas take time out of their busy schedules to bond with each other. The actively seek out any occasion to be with each other. This often gives Capoeira a cultish feel. However, once you try Capoeira you’ll begin to notice that members of the community simply like spending time with each other and joyfully organise events, tours, birthday parties, and other social occasions to be able to connect more deeply.
+              </p>
+      	    </div>
+	    <div class="span4">
+	      <h5>Feedback</h5><hr />
+              <p style="font-size:12px">
+Capoeira gives feedback right away. The minute you step up to add value to the group, the minute you get recognition. Capoeira groups rapidly embrace people from all walks of life that want to improve the group in some aspect. There are many ways to contribute. You can help by planning events or opening your home for a potluck. Even training every class or putting all your energy / passion into making your movement perfect for rodas will never go unnoticed, so long as you are doing it with the purpose of making the group a better Capoeira community.
+              </p>
+	    </div>
+	  </div>
+      	  <div class="row-fluid description">
+	    <div id="facebook-feedback" class="span12 copy">
+	      <div class="fb-comments" data-href="http://www.cdoseoul.com/expatsintegrate" data-width="100%" data-numposts="5" data-colorscheme="light"></div>
+	    </div><hr />
+	  </div>
+        </div>
+      </div>
+{% endblock %}
