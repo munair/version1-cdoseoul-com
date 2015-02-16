@@ -17,6 +17,11 @@ app.get('/', function(request, response) {
   response.render('index', { });
 });
 
+app.get('/expatsintegrate', function(request, response) {
+  app.set('form subject', 'Five Reasons Why Capoeira Helps Expats Integrate');
+  response.render('expatsintegrate', { });
+});
+
 app.get('/classpreparation', function(request, response) {
   app.set('form subject', 'Preparation for Capoeira');
   response.render('classpreparation', { });
