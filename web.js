@@ -17,6 +17,11 @@ app.get('/', function(request, response) {
   response.render('index', { });
 });
 
+app.get('/getsmarter', function(request, response) {
+  app.set('form subject', 'Three Reasons Why Capoeira Improves Intelligence');
+  response.render('expatsintegrate', { });
+});
+
 app.get('/expatsintegrate', function(request, response) {
   app.set('form subject', 'Five Reasons Why Capoeira Helps Expats Integrate');
   response.render('expatsintegrate', { });
