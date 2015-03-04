@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <!-- We use the Facebook JavaScript Plugin to allow for comments. -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=117771778298074&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    <div class="container">
+      <div class="row-fluid">
+	<div class="span12">
+      	  <div class="row-fluid heading">
+	    <div class="span12">
+	      <h1>Get Smarter</h1>
+	      <h3>Three Reasons Why Capoeira Improves Intelligence</h3>
+	      <img src="http://www.munair.com/images/headshot.png"  width="50px" height="50px" alt="Instrutor Zumbi"> via <a href="http://www.zumbicdo.com/" target="_new" title="Posts by Zumbi CDO" rel="author">Instrutor Zumbi</a> on 4/3/2015
+	    </div>
+      	  </div>
+      	  <div class="row-fluid subheading">
+	    <div class="span12">
+	      <p class="lead">cordão de ouro seoul</p>
+	    </div>
+      	  </div>
+      	  <div class="row-fluid description">
+	    <div id="about" class="span12 copy">
+	      <p>
+What does walking on your hands have to do with intelligence? I'd wager quite a lot. Apart from improving <a target="_new" href="http://www.educlime.com/wharemosk.html">motor skills</a>, the beautiful movements used in playing Capoeira help you to see the world differently. That new found perspective spills over into work and everyday life, giving you the creativity to address the multitude of challenges that we all must face everyday.
+              </p>
+	      <p>
+Here are three reasons why Capoeira helps improve intelligence.
+	      </p>
+	    </div><hr />
+	  </div>
+      	  <div class="row-fluid marketing">
+	    <div class="span4">
+	      <h5>Resourcefulness</h5><hr />
+              <p style="font-size:12px">
+The constraints of the <a target="_new" href="https://www.youtube.com/watch?v=E8hKh3NE-tw">roda</a> (the circle in which a Capoeira game is played) mean that practitioners are constantly inventing new ways to move around. For example, people without Capoeira training want to escape an attack coming at them by moving backward. However, Capoeiristas (Capoeira practitioners) can't always move back to escape because of the restrictions the roda places upon their movement. Consequently, they are more aware that they can go over, under, or into an attack to evade the impending threat. This spills over into behavior at work and school. Capoeiristas are less likely to "rely on the hammer" and treat everything as a nail. Capoeiristas train themselves to be more resourceful.
+              </p>
+	    </div>
+	    <div class="span4">
+	      <h5>Creativity</h5><hr />
+              <p style="font-size:12px">
+Walking on your hands really takes you out of your comfort zone as a biped. Being out of your comfort zone improves ones "optimal performance zone" according to Alasdair White's "From Comfort Zone to Performance Management" (2009). According to Jerry Wind (he teaches creativity at the prestigious <a target="_new" href="http://www.wharton.upenn.edu/">Wharton School</a> of Business), moving out of your comfort zone improves creativity. Capoeiristas routinely push out of their comfort zones. They develop a habit of performing optimally and living creatively.
+              </p>
+	    </div>
+	    <div class="span4">
+	      <h5>High Function Zone</h5><hr />
+		<a target="_new" href=http://lifehacker.com/the-science-of-breaking-out-of-your-comfort-zone-and-w-656426705"> <img src="https://s3-ap-northeast-1.amazonaws.com/www-cdoseoul-com/getsmarter.png" width="100%" alt="Improve Creativity"> </a>
+              </p>
+      	    </div>
+	  </div>
+      	  <div class="row-fluid faq">
+	    <div class="span2"></div>
+	    <div class="span4">
+	      <h5>Imagination</h5><hr />
+              <p style="font-size:12px">
+Capoeiristas often dream of moving differently at night when they sleep. This is a testimony to the fact that the art of Capoeira stimulates the imagination. The practice of Capoeira breaks down ingrained fears of failure and simultaneously replaces them with the belief that anything is possible. Once you start doing things you've never done before with great frequency, as you do when you practice Capoeira, you increasing question what is truly impossible. Capoeira develops your ability to imagine that you can do great things with your life. Our most revered intellects had fantastic imaginations.
+              </p>
+      	    </div>
+	    <div class="span4">
+	      <h5>Read More</h5><hr />
+		<a href="http://www.cdoseoul.com/expatsintegrate"> <img src="https://s3-ap-northeast-1.amazonaws.com/www-cdoseoul-com/zumbiesquiva.jpg" width="100%" alt="Escape Under"> </a>
+      	    </div>
+	    <div class="span2"></div>
+	  </div>
+      	  <div class="row-fluid description">
+	    <div id="facebook-feedback" class="span12 copy">
+	      <div class="fb-comments" data-href="http://www.cdoseoul.com/getsmarter" data-width="100%" data-numposts="5" data-colorscheme="light"></div>
+	    </div><hr />
+	  </div>
+        </div>
+      </div>
+{% endblock %}
