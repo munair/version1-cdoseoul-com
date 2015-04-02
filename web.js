@@ -39,13 +39,19 @@ app.get('/meditation', function(request, response) {
 
 app.post('/contact', function(request, response) {
   var name = request.body.name;
+  var fbid = request.body.fbid;
   var email = request.body.email;
   var mobile = request.body.mobile;
+  var hobbies = request.body.hobbies;
+  var injuries = request.body.injuries;
   var referral = request.body.referral;
   var validation = request.body.validation;
   var out = 'contact name: ' + name 
 	  + '\ncontact email: ' + email 
+	  + '\ncontact facebook id: ' + fbid 
 	  + '\nmobile: ' + mobile 
+	  + '\nhobbies: ' + hobbies
+	  + '\ninjuries: ' + injuries 
 	  + '\nreferral: ' + referral 
 	  + '\nvalidation: ' + validation 
 	  + '\n';
